@@ -10,6 +10,7 @@ body{
   margin: auto;
   position: relative;
   padding: 10px;
+  min-height: 600px;
   #logo{
     margin: 0
   }
@@ -19,4 +20,10 @@ body{
     right: 10px;
     top: 10px;
   }
+}
+
+#wrapper #search {
+  text-align: center;
+  margin: auto;
+  margin-top: 2em;
 }

@@ -4,7 +4,7 @@ Kifa::Application.routes.draw do
   resources :lectures
   resources :resources
 
-  root :to => "users#index"
+  root :to => "kifa#index"
 
   match "/login" => "sessions#new"
 

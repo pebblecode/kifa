@@ -39,5 +39,5 @@ gem "random_data", "~> 1.6.0"
 
 group :development, :test do
   gem 'minitest'
-  
+  gem "factory_girl_rails", "~> 4.0"
 end

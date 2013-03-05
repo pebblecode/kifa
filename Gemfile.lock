@@ -40,8 +40,16 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+<<<<<<< HEAD
     faker (1.1.2)
       i18n (~> 0.5)
+=======
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.2.1)
+      factory_girl (~> 4.2.0)
+      railties (>= 3.0.0)
+>>>>>>> Factory girl added.
     hike (1.2.1)
     i18n (0.6.4)
     journey (1.0.4)
@@ -109,7 +117,11 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+<<<<<<< HEAD
   faker (~> 1.1.2)
+=======
+  factory_girl_rails (~> 4.0)
+>>>>>>> Factory girl added.
   jquery-rails
   minitest
   pg

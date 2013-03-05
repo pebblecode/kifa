@@ -1,8 +1,12 @@
 require 'test_helper'
  
 describe Resource do
-  it "creates a new book" do
-    1.must_equal 1
+  before do
+    @resource = Resource.new
+  end
+
+  it "should be invalid if a name and link are not provided" do
+    @resource.valid?.wont_equal true
   end
 end
 

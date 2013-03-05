@@ -126,3 +126,66 @@ body{
 p.action {
   color: #ccc;
 }
+
+
+
+#dragBox1{
+    border:1px dashed black;
+    height:290px;
+    border-radius: 15px;
+}
+#dragTitle{
+  width:20%;
+  font-size:36pt;
+  float:left;
+  padding-left:10px;
+  padding-top:15px;
+
+}
+#dragPicture{
+    width:70%;
+    float:right;
+
+}
+#cantDrag{
+    clear:both;
+    float:right;
+    padding-right:10px;
+}
+#dragPlus{
+    margin-top:30px;
+    margin-left:100px;
+}
+#createLectureButton{
+    float:right;
+    background-color: #3399ff;
+    color:white;
+    margin:5px;
+    padding:5px;
+}
+#uploadConfirm
+{
+    display:none;
+    padding-left:10px
+}
+#dragBox2{
+    display:none;
+    border:1px dashed black;
+    height:290px;
+    border-radius: 15px;
+    width:63%;
+    float:right;
+}
+#dragTitle2{
+  width:20%;
+  font-size:20pt;
+  float:left;
+  padding-left:10px;
+  padding-top:15px;
+
+}
+#dragDetails{
+  width:65%;
+  float:right;
+  margin-left:12%;
+}

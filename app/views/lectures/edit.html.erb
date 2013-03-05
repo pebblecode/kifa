@@ -1,12 +1,26 @@
 
-<%= form_for @lecture, :url => { :action => "update" }, :html => { } do |f| %>
-  <h1 id="greeting">Hi</h1>
-  <div id="title">
-    <%= f.label :title, 'What is the title of your lecture?' %>
-    <%= f.text_field :title,
-          :maxlength => 200,
-          :size => 30,
-          :class => 'title-input' %>
-  </div>
-  <%= f.submit 'Continue' %>
-<% end %>
+<div id="title">
+    <h2 id="lectureTitle"><%= @lecture.title %></h2>
+    <h3 id="lecturer"><%= @lecture.lecturer.name %></h3>
+</div>
+
+<div id="dragBox1">
+    <div id="dragTitle">drag your slides here.</div>
+    <div id="dragPicture"><%= image_tag "images.jpeg"%></div>
+    <div id="cantDrag">can't drag and drop? upload your slides here</div>
+    <div id="uploadConfirm"><h2>Your slides uploaded successfully!</h2></div>
+</div>
+<div id="dragBox2">
+    <div id="dragTitle2">you can drag any other relevant files here.</div>
+    <div id="dragDetails">
+        <ul>
+          <li>Word documents</li>
+          <li>Endnote, BibTex</li>
+          <li>Pictures</li>
+          <li>Videos</li>
+          <li>MP3</li>
+        </ul>
+    </div>
+</div>
+
+<%= link_to 'Create Lecture', @lecture, :id => 'createLectureButton'%>

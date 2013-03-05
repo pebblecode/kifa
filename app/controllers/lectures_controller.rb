@@ -22,8 +22,10 @@ class LecturesController < ApplicationController
     @lecture.lecturer = current_user
     if @lecture.save
       flash[:notice] = 'Saved successfully'
+      redirect_to [:edit, @lecture]
+    else
+      respond_with @lecture
     end
-    respond_with @lecture
   end
 
   def edit

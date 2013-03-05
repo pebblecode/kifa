@@ -23,6 +23,23 @@ $(function() {
     } else {
       $('#faux-results').hide();
     }
-
   });
+
+  $('#cantDrag').click(function(){
+     $('#dragPicture').fadeOut();
+     $('#dragTitle').fadeOut();
+     $('#cantDrag').fadeOut(function(){
+         $('#dragBox1').animate({width:'35%'},500,function(){
+                   $('#dragBox1').css({
+                           border:"1px solid #ccffcc",
+                           float:"left"
+                           });
+                   $('#dragBox1').css("background-color","#ccffcc");
+                   $('#uploadConfirm').fadeIn(2000);
+                   $('#dragBox2').fadeIn();
+               });
+
+     });
+  });
+
 });

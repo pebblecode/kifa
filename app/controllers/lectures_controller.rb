@@ -9,6 +9,7 @@ class LecturesController < ApplicationController
   end
 
   def show
+    @users = User.all
     respond_with @lecture
   end
 

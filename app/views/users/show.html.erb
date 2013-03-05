@@ -3,7 +3,7 @@
 
 
 <% if @user.lectures.any? %>
-<ul>
+<ul class="stripe">
 <% @user.lectures.each do |lecture| %>
 <li class="lecture-title">
   <a href="<%= lecture_url(lecture) %>"><%= lecture.title %>

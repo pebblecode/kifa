@@ -6,7 +6,11 @@ Kifa::Application.routes.draw do
 
   root :to => "kifa#index"
 
-  match "/login" => "sessions#new"
+  match "/login" => "sessions#index"
+
+  devise_scope :user do
+    get 'logout', :to => 'devise/sessions#destroy'
+  end
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 

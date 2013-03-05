@@ -1,6 +1,6 @@
 class Lecture < ActiveRecord::Base
 
-  attr_accessible :title, :lecturer_id
+  attr_accessible :title, :lecturer
 
   belongs_to :lecturer, :class_name => User
 
@@ -10,5 +10,4 @@ class Lecture < ActiveRecord::Base
       :maximum => 200
     }
 
-  validates :lecturer, :presence => true
 end

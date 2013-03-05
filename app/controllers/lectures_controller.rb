@@ -18,6 +18,7 @@ class LecturesController < ApplicationController
 
   def create
     @lecture = Lecture.new(params[:lecture])
+    @lecture.lecturer = current_user
     if @lecture.save
       flash[:notice] = 'Saved successfully'
     end

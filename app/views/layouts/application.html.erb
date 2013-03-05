@@ -10,9 +10,7 @@
     <h1 id='logo'><%= link_to 'kifa', '/' %></h1>
     <div id="auth">
       <%- if current_user %>
-        <%= current_user.username %>
-      <% else %>
-        <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+        <%= current_user.username %> | <a href="/logout">Logout</a>
       <% end %>
     </div>
     <div id="main">

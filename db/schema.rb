@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(:version => 20130305150032) do
     t.integer  "lecturer_id"
   end
 
+  create_table "locations", :force => true do |t|
+    t.string   "title",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "resources", :force => true do |t|
     t.string   "name"
     t.string   "link",       :null => false

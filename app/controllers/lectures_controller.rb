@@ -1,6 +1,7 @@
 class LecturesController < ApplicationController
   respond_to :html, :json
   before_filter :find_lecture, :only => [:show, :edit, :update, :destroy]
+  before_filter :require_user
 
   def index
     @lectures = Lecture.all
@@ -49,5 +50,13 @@ class LecturesController < ApplicationController
     def find_lecture
       @lecture = Lecture.find(params[:id])
     end
+
+    def require_user
+      unless current_user
+        redirect_to login_url
+        return false
+      end
+    end
+    
 
 end

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  respond_to :json
+  respond_to :json, :html
   before_filter :find_user, :only => [:show, :edit, :update, :destroy]
 
   def index

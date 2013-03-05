@@ -1,13 +1,15 @@
 
 <%= form_for @lecture, :url => { :action => "create" }, :html => { } do |f| %>
-  <h1 id="greeting">Hi <span>Jim!</span></h1>
+  <h1 id="greeting">hi <span><%= current_user.username%></span>!</h1>
   <div id="title">
-    <%= f.label :title, 'What is the title of your lecture?' %>
+    <h2><%= f.label :title, "what's the title of your lecture?" %></h2>
     <%= f.text_field :title,
           :maxlength => 200,
           :size => 30,
           :class => 'title-input' %>
   </div>
+  <div class="submit">
+    <%= f.submit 'upload slides' %>
+  </div>
 
-  <%= f.submit 'Continue' %>
 <% end %>

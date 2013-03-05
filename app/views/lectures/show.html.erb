@@ -1,7 +1,7 @@
 <h2 id="lecture-title">
   <%= @lecture.title%>
 </h2>
-<h3 id='lecturer-name'><%= @lecture.lecturer.name || 'N/A' %></h3>
+<h3 id='lecturer-name'><%= link_to @lecture.lecturer.name || 'N/A', user_path(@lecture.lecturer) %></h3>
 
 
 <iframe width="780" height="585" src="http://www.youtube-nocookie.com/embed/KkMDCCdjyW8" frameborder="0" allowfullscreen></iframe>

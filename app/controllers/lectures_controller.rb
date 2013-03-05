@@ -20,10 +20,9 @@ class LecturesController < ApplicationController
     @lecture = Lecture.new(params[:lecture])
     if @lecture.save
       flash[:notice] = 'Saved successfully'
-      redirect_to edit_lecture_url(@lecture.id)
-    else
-      respond_with @lecture
     end
+
+    respond_with @lecture
   end
 
   def edit

@@ -22,7 +22,6 @@ class LecturesController < ApplicationController
     if @lecture.save
       flash[:notice] = 'Saved successfully'
     end
-
     respond_with @lecture
   end
 

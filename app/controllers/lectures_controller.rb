@@ -1,5 +1,5 @@
 class LecturesController < ApplicationController
-  respond_to :json
+  respond_to :html, :json
   before_filter :find_lecture, :only => [:show, :edit, :update, :destroy]
 
   def index
@@ -11,9 +11,28 @@ class LecturesController < ApplicationController
     respond_with @lecture
   end
 
+  def new
+    @lecture = Lecture.new
+  end
+
   def create
     @lecture = Lecture.new(params[:lecture])
-    respond_with @lecture
+    if @lecture.save
+      flash[:notice] = 'Saved successfully'
+    end
+    respond_to do |format|
+      format.html {
+        redirect_to [:edit, @lecture]
+      }
+      format.json {
+        respond_with @lecture
+      }
+    end
+
+  end
+
+  def edit
+    @resources = @lecture.resources.build
   end
 
   def update

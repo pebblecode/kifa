@@ -1,0 +1,22 @@
+body{
+
+  font-family: 'Futura', sans-serif;
+  font-size: 16px;
+}
+
+#wrapper{
+  border: 1px solid black;
+  width: 800px;
+  margin: auto;
+  position: relative;
+  padding: 10px;
+  #logo{
+    margin: 0
+  }
+
+  #auth {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}

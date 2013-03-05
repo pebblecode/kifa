@@ -36,6 +36,9 @@ gem 'jquery-rails'
 #
 gem "faker", "~> 1.1.2"
 gem "random_data", "~> 1.6.0"
+gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
+gem 'omniauth-twitter'
+gem 'devise'
 
 group :development, :test do
   gem 'minitest'

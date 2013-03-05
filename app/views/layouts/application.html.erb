@@ -6,16 +6,14 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 <body id="<%= params[:controller]%>">
-
-  <%- if current_user %>
-    <%= current_user.username %>
-  <%= else %>
-    <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
-  <% end %>
   <div id="wrapper">
     <h1 id='logo'><%= link_to 'kifa', '/' %></h1>
     <div id="auth">
-      John Doe
+      <%- if current_user %>
+        <%= current_user.username %>
+      <% else %>
+        <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+      <% end %>
     </div>
     <div id="kifa">
       <%= yield %>

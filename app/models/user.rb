@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   attr_accessible :username, :provider, :uid, :avatar, :name
 
-  has_many :lectures
+  has_many :lectures, :foreign_key => 'lecturer_id'
 
   validates :username,
     :presence => true,

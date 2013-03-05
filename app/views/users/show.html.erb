@@ -1,0 +1,13 @@
+
+<h1><%= @user.name %></h1>
+
+
+<% if @user.lectures.any? %>
+<ul>
+<% @user.lectures.each do |lecture| %>
+<li class="lecture-title">
+  <a href="<%= lecture_url(lecture) %>"><%= lecture.title %>
+</li>
+<% end %>
+</ul>
+<% end %>

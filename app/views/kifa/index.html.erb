@@ -4,6 +4,31 @@
   <form action="/kifa/search" method="post" accept-charset="utf-8">
     <p>search courses, topics, universities, lectures, lecturers</p>
     <input type="text" value="" />
-    <p><input type="submit" value="Continue &rarr;" /></p>
+    <ul id='faux-results'>
+      <li>
+        <span class='result-type'>Courses</span>
+        <div class='results'>
+          <span class='result-lecture'>Jane Austen 101</span>
+          <span class='result-name'>Jane Austen: Pride Prejudice and Zombies</span>
+        </div>
+      </li>
+      <li>
+        <span class='result-type'>Universities</span>
+        <div class='results'>
+          <span class='result-name'>University of Janesz</span>
+        </div>
+      </li>
+      <li>
+        <span class='result-type'>Lecturers</span>
+        <div class='results'>
+          <span class='result-lecture'>Jane Smith</span>
+          <span class='result-name'>Janee Green</span>
+        </div>
+      </li>
+    </ul>
   </form>
+</div>
+
+<div id='add-lecture-button'>
+  <a href="/lectures/new" class='button'>Add lecture</a>
 </div>

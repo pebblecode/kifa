@@ -13,3 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+
+$(function() {
+  $('#search input').keyup(function(e, d) {
+    if ($(this).val().length > 0) {
+      $('#faux-results').show();
+    } else {
+      $('#faux-results').hide();
+    }
+
+  });
+});

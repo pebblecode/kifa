@@ -20,10 +20,61 @@ body{
     right: 10px;
     top: 10px;
   }
+
+  #search {
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    form {
+      input[type=text] {
+        border: 1px solid #aaa;
+        padding: 10px;
+        font-size: 20pt;
+        outline: none;
+        width: 500px;
+      }
+    }
+  }
 }
 
-#wrapper #search {
-  text-align: center;
+#add-lecture-button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  text-align: right;
+
+  a.button {
+    background: blue;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
+#faux-results {
+  display: none;
+  width: 520px;
   margin: auto;
-  margin-top: 2em;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 0px;
+  margin-top: -3px;
+  font-size: 80%;
+  font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  li {
+    &:hover {
+      background: #f8f8f8;
+    }
+    padding: 5px;
+    color: #888;
+    cursor: pointer;
+    text-align: left;
+    margin: 0;
+    .result-type { color: blue; }
+    .results, .result-name { display: block;}
+  }
 }

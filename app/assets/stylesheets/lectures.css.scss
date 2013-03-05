@@ -22,7 +22,7 @@
       color: blue;
     }
   }
-  width: 660px;
+  width: 680px;
   margin: auto;
   margin-top: 50px;
   input[type=text] {
@@ -39,13 +39,16 @@
   }
 
   .submit{
+    text-align: right;
+    margin-top: 2em;
   }
+
   input[type=submit] {
     border: 0;
     background: transparent;
     color: transparent;
-    background: url('http://files.getcloudapp.com/items/290W1g1q0t251l371A0L/Screen%20Shot%202013-03-05%20at%2016.56.07.png') no-repeat 0 0;
-
+    background: url('http://files.getcloudapp.com/items/290W1g1q0t251l371A0L/Screen%20Shot%202013-03-05%20at%2016.56.07.png') no-repeat center right;
+    padding: 0;
     width: 160px;
     height: 50px;
     cursor: pointer;

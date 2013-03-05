@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 <body id="<%= params[:controller]%>">
 
-  <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+  <%- if current_user %>
+    <%= current_user.username %>
+  <%= else %>
+    <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+  <% end %>
   <div id="wrapper">
     <h1 id='logo'><%= link_to 'kifa', '/' %></h1>
     <div id="auth">

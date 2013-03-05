@@ -26,5 +26,10 @@ describe Lecture do
     @lecture.lecturer = @user
     @lecture.valid?.must_equal true
   end
+
+  it "should delegate #username to its lecturer" do
+    @lecture.lecturer = @user
+    @lecture.username.must_equal @user.username
+  end
 end
 

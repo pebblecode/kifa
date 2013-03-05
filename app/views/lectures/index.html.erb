@@ -1,0 +1,9 @@
+<% if @lectures.any? %>
+<ul>
+<% @lectures.each do |lecture| %>
+<li class="lecture-title">
+  <a href="<%= lecture_url(lecture) %>"><%= lecture.title %>
+</li>
+<% end %>
+</ul>
+<% end %>

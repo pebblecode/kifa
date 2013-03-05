@@ -3,9 +3,11 @@ require 'test_helper'
 describe Resource do
 
   before do
+    @lecture  = FactoryGirl.create(:lecture)
     @resource = FactoryGirl.build :resource,
       :link => 'http://embryology.med.unsw.edu.au/pdf/Origin_of_Species.pdf',
       :name => 'The Origin Of Species'
+    @resource.lecture = @lecture
   end
 
   it "should accept valid urls" do
@@ -29,4 +31,9 @@ describe Resource do
     @resource.valid?.must_equal true
   end
 
+  it "belongs to a lecture" do
+    @resource.valid?.must_equal true
+    @resource.lecture = nil
+    @resource.valid?.must_equal false
+  end
 end

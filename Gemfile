@@ -34,7 +34,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 #
+gem "faker", "~> 1.1.2"
+gem "random_data", "~> 1.6.0"
 
 group :development, :test do
   gem 'minitest'
+  
 end

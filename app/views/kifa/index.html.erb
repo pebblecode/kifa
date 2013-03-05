@@ -6,24 +6,30 @@
     <input type="text" value="" />
     <ul id='faux-results'>
       <li>
+        <a href="<%=  lecture_url(Lecture.order('RANDOM()').first.id) %>">
         <span class='result-type'>Courses</span>
         <div class='results'>
           <span class='result-lecture'>Jane Austen 101</span>
           <span class='result-name'>Jane Austen: Pride Prejudice and Zombies</span>
         </div>
+        </a>
       </li>
       <li>
+        <a href="<%=  lecture_url(Lecture.order('RANDOM()').first.id) %>">
         <span class='result-type'>Universities</span>
         <div class='results'>
           <span class='result-name'>University of Janesz</span>
         </div>
+        </a>
       </li>
       <li>
+        <a href="<%=  lecture_url(Lecture.order('RANDOM()').first.id) %>">
         <span class='result-type'>Lecturers</span>
         <div class='results'>
           <span class='result-lecture'>Jane Smith</span>
           <span class='result-name'>Janee Green</span>
         </div>
+        </a>
       </li>
     </ul>
   </form>

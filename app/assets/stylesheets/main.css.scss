@@ -21,6 +21,16 @@ body{
     top: 10px;
   }
 
+  ul.stripe  {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    li:nth-child(odd) {
+      clear: left;
+      padding: 10px;
+      border-bottom: 1px dotted #ccc;
+    }
+  }
 
   #search {
     text-align: center;
@@ -84,4 +94,35 @@ body{
 
 .resources-panel{
   display: inline-block;
+}
+.lecture-container {
+  width: 100%;
+  margin-top: 30px;
+  float: left;
+  margin-bottom: 10px;
+  .lecture-left {
+    width: 47%;
+    padding: 1%;
+    height: 300px;
+    border: 1px solid black;
+    float: left;
+    &:hover {
+      cursor: pointer;
+      background: gray
+    }
+  }
+  .lecture-right {
+    width: 47%;
+    padding: 1%;
+    float: right;
+    height: 300px;
+    border: 1px solid black;
+    &:hover {
+      cursor: pointer;
+      background: gray
+    }
+  }
+}
+p.action {
+  color: #ccc;
 }

@@ -2,33 +2,39 @@
   <%= @lecture.title%>
 </h2>
 <h3 id='lecturer-name'><%= link_to @lecture.lecturer.name || 'N/A', user_path(@lecture.lecturer) %></h3>
+<p>5th March 2013</p>
 
+<div class="lecture-container">
+  <div class="lecture-left">
+    <p class="action">Add description</p>
+  </div>
+  <div class="lecture-right">
+<iframe src="http://www.slideshare.net/slideshow/embed_code/31514" width="361" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> 
+  </div>
+</div>
 
-<iframe src="http://www.slideshare.net/slideshow/embed_code/31514" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/vidyasri1953/functional-areas-of-our-brain" title="Functional Areas of Our Brain" target="_blank">Functional Areas of Our Brain</a> </strong> from <strong><a href="http://www.slideshare.net/vidyasri1953" target="_blank">vidyasri1953</a></strong> </div>
-<div class='resources-panel'>
-<iframe width="388" height="291" src="http://www.youtube-nocookie.com/embed/KkMDCCdjyW8" frameborder="0" allowfullscreen></iframe>
+<div class="lecture-container">
+  <div class="lecture-left">
+    <p class="action">Add other documents</p>
+  </div>
+  <div class="lecture-right">
+    <p class="action">Add reading list</p>
+  </div>
 </div>
 
 
-<div class='resources-panel'>
-  <h3>Attendees</h3>
-  <ul>
-    <li>Vincent Martínez</li>
-    <li>John Mildinhall</li>
-    <li>George Ornbo</li>
-  </ul>
-</div>
 
-<div class='resources-panel'>
+<h3>Attendees</h3>
 
-</div>
-
-<h3>Location</h3>
-
+<% if @users.any? %>
+<ul class="stripe">
+<% @users.each do |user| %>
+<li class="lecture-title">
+  <%= image_tag(current_user.avatar) %>
+  <a href="<%= user_url(user) %>"><%= user.name %>
+</li>
+<% end %>
+</ul>
+<% end %>
 
 
-
-<h3>Documents</h3>
-<div>
-  <a href="http://www.stanford.edu/class/cs193p/cgi-bin/drupal/system/files/lectures/05_Views.pdf">05_Views.pdf<a>
-</div>

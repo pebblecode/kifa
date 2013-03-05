@@ -18,18 +18,15 @@ describe Resource do
   end
 
   it "should not allow urls longer than 200 chars" do
-    @resource.link += "?queryparam="
-    200.times do
-      @resource.link += "x"
-    end
+    @resource.link += "?q=" + Random.alphanumeric(size = 200)
     @resource.valid?.must_equal false
   end
 
   it "should not allow names longer than 200 chars" do
-    201.times do
-      @resource.name += "X"
-    end
+    @resource.name = Random.alphanumeric(size = 201)
     @resource.valid?.must_equal false
+    @resource.name = Random.alphanumeric(size = 100)
+    @resource.valid?.must_equal true
   end
 
 end

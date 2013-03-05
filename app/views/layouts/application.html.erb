@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 <body id="<%= params[:controller]%>">
   <div id="wrapper">
-    <h1 id='logo'><%= link_to 'kifa', '/' %></h1>
+    <h1 id='logo'><%= link_to 'Knowledge Is Free Again', '/' %></h1>
     <div id="auth">
       <%- if current_user %>
         <%= image_tag(current_user.avatar) %>

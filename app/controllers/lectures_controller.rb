@@ -22,15 +22,7 @@ class LecturesController < ApplicationController
     if @lecture.save
       flash[:notice] = 'Saved successfully'
     end
-    respond_to do |format|
-      format.html {
-        redirect_to [:edit, @lecture]
-      }
-      format.json {
-        respond_with @lecture
-      }
-    end
-
+    respond_with @lecture
   end
 
   def edit
@@ -58,6 +50,6 @@ class LecturesController < ApplicationController
         return false
       end
     end
-    
+
 
 end

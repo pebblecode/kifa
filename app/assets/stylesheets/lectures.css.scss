@@ -12,3 +12,45 @@
   font-size: 100%;
   margin: 0;
 }
+
+
+
+#new_lecture {
+  h1 {
+    font-size: 45px;
+    span {
+      color: blue;
+    }
+  }
+  width: 680px;
+  margin: auto;
+  margin-top: 50px;
+  input[type=text] {
+    border: 1px solid #aaa;
+    padding: 10px;
+    font-size: 20pt;
+    outline: none;
+    display: block;
+    width: 660px;
+  }
+
+  #title h2 {
+    font-size: 45px;
+  }
+
+  .submit{
+    text-align: right;
+    margin-top: 2em;
+  }
+
+  input[type=submit] {
+    border: 0;
+    background: transparent;
+    color: transparent;
+    background: url('http://files.getcloudapp.com/items/290W1g1q0t251l371A0L/Screen%20Shot%202013-03-05%20at%2016.56.07.png') no-repeat center right;
+    padding: 0;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+  }
+}

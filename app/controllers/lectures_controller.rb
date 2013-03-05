@@ -1,5 +1,5 @@
 class LecturesController < ApplicationController
-  respond_to :json
+  respond_to :html, :json
   before_filter :find_lecture, :only => [:show, :edit, :update, :destroy]
 
   def index
@@ -9,6 +9,10 @@ class LecturesController < ApplicationController
 
   def show
     respond_with @lecture
+  end
+
+  def new
+    @lecture = Lecture.new
   end
 
   def create
